@@ -7,4 +7,146 @@ header {
   font-family: "Shrikhand", cursive;
 }
 
+.footer__heading {
+  font-family: "Shrikhand", cursive;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+}
+.header__logo {
+  font-size: 1.8rem;
+  margin: 1rem auto 0.5rem;
+}
+
+.restaurant {
+  position: relative;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1.1rem;
+}
+.restaurant__photo {
+  height: 174px;
+  object-fit: cover;
+}
+.restaurant__new {
+  background-color: #99E2D0;
+  max-width: 4rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  color: #278870;
+  font-weight: bold;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+.restaurant__infos {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+}
+.restaurant__like {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  background-color: #353535;
+  color: #ffffff;
+  padding: 1.5rem;
+}
+.footer__heading {
+  margin-bottom: 1.5rem;
+}
+.footer__links {
+  list-style: none;
+}
+.footer__links li {
+  margin-bottom: 0.5rem;
+}
+.footer__icons {
+  margin-right: 0.75rem;
+  font-size: 0.85rem;
+  width: 0.75rem;
+}
+
+.localisation {
+  background-color: #eaeaea;
+  text-align: center;
+}
+.localisation__city {
+  font-weight: bold;
+  padding: 1rem 0;
+}
+.localisation__city__icon {
+  font-size: 1rem;
+  padding-right: 1rem;
+}
+
+.booking {
+  background-color: #f6f6f6;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+}
+.booking__heading {
+  margin-bottom: 1rem;
+}
+.booking__desc {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.tutorial {
+  padding: 3rem 1.25rem;
+}
+.tutorial__heading {
+  margin-bottom: 2rem;
+}
+.tutorial__steps {
+  list-style-type: none;
+}
+.tutorial__steps li {
+  background-color: #f6f6f6;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  padding: 1.25rem;
+  margin-left: 0.75rem;
+  border-radius: 0.9rem;
+}
+.tutorial__steps__count {
+  color: white;
+  text-align: center;
+  background-color: #9356DC;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-left: -2rem;
+}
+.tutorial__steps__icons {
+  margin: 0 1.25rem;
+  color: #7e7e7e;
+  max-width: 1rem;
+}
+
+.gallery {
+  background-color: #f6f6f6;
+  padding: 3rem 1.25rem;
+}
+.gallery__heading {
+  margin-bottom: 1.25rem;
+}
+
 /*# sourceMappingURL=style.css.map */

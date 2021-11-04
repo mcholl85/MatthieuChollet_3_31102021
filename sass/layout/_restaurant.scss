@@ -1,0 +1,34 @@
+.restaurant {
+    position: relative;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 1.1rem;
+    &__photo {
+        height: 174px;
+        object-fit: cover;
+    }
+    &__new {
+        background-color: $color-tertiary;
+        max-width: 4rem;
+        border-radius: 0.2rem;
+        padding: 0.5rem;
+        color: darken($color-tertiary, 40%);
+        font-weight: bold;
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+    &__infos {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: white;
+    }
+    &__like {
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+    }
+}
