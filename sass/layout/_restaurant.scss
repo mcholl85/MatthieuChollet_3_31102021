@@ -1,5 +1,6 @@
 .restaurant {
     position: relative;
+    @include box-shadow;
     border-radius: 0.625rem;
     overflow: hidden;
     display: flex;
@@ -25,10 +26,5 @@
         justify-content: space-between;
         padding: 1rem;
         background-color: white;
-    }
-    &__like {
-        font-size: 1.25rem;
-        display: flex;
-        align-items: center;
     }
 }
