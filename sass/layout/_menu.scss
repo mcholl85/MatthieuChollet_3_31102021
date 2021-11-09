@@ -9,7 +9,7 @@
 .cards {
     display: flex;
     flex-flow: column nowrap;
-    background-color: $color-bg-menu;
+    background-color: $color-bg-cards;
     overflow: overlay;
     border-radius: 2rem 2rem 0 0;
     padding: 0 0.75rem;
@@ -33,7 +33,7 @@
         padding-left: 0.6rem;
     }
     &__item {
-        background-color: $color-bg-menu-list;
+        background-color: $color-bg-menu;
         border-radius: 0.75rem;
         margin: 0.875rem 0;
         display: flex;
@@ -74,7 +74,7 @@
             & .btn-check {
                 margin-right: 0;
                 &__icons {
-                    transform:rotate(360deg);
+                    transform: rotate(360deg);
                 }
             }
         }

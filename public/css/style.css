@@ -264,12 +264,23 @@ a {
 }
 
 .like {
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   display: flex;
   align-items: center;
+  border: 0;
+  background-color: #FFFFFF;
 }
 .like--cards {
   margin-right: 1.5rem;
+  background-color: #f6f6f6;
+}
+.like:hover {
+  background: linear-gradient(to top right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.like:hover .far {
+  font-weight: 900;
 }
 
 .btn-check {
