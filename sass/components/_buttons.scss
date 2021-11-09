@@ -25,12 +25,25 @@
         margin-right: 1.5rem;
         background-color: $color-bg-cards;
     }
-    &:hover {
+    & i::before {
+        position: absolute;
+        opacity: 1;
+    }
+    & i::after {
+        font-weight: 900;
+        content: "\f004";
         background: $color-btn-like;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        & .far {
-            font-weight: 900;
+        opacity: 0;
+        transition: opacity ease-in 600ms;
+    }
+    &:hover {
+        & i::before {
+            opacity: 0;
+        }
+        & i::after {
+            opacity: 1;            
         }
     }
 }

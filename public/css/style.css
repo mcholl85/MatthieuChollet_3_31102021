@@ -274,13 +274,24 @@ a {
   margin-right: 1.5rem;
   background-color: #f6f6f6;
 }
-.like:hover {
+.like i::before {
+  position: absolute;
+  opacity: 1;
+}
+.like i::after {
+  font-weight: 900;
+  content: "\f004";
   background: linear-gradient(to top right, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: opacity ease-in 600ms;
 }
-.like:hover .far {
-  font-weight: 900;
+.like:hover i::before {
+  opacity: 0;
+}
+.like:hover i::after {
+  opacity: 1;
 }
 
 .btn-check {
