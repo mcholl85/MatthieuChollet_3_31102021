@@ -8,7 +8,7 @@
     &:hover {
         opacity: 0.8;
     }
-    &--menu {
+    &--cards {
         margin-top: 1rem;
         margin-bottom: 5rem;
         align-self: center;
@@ -19,7 +19,18 @@
     font-size: 1.25rem;
     display: flex;
     align-items: center;
-    &--menu {
+    &--cards {
         margin-right: 1.5rem;
+    }
+}
+.btn-check {
+    background-color: $color-tertiary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3.75rem;
+    &__icons {
+        color: #FFFFFF;
+        font-size: 1.25rem;
     }
 }
