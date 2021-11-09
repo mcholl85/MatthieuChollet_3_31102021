@@ -6,6 +6,10 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
 }
 
+@mixin box-highshadow {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
+}
+
 @mixin text-nowrap {
     overflow: hidden;
     text-overflow: ellipsis;

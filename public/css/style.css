@@ -256,6 +256,7 @@ a {
 }
 .btn:hover {
   opacity: 0.8;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 .btn--cards {
   margin-top: 1rem;

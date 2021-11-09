@@ -7,6 +7,7 @@
     @include btn-bg;
     &:hover {
         opacity: 0.8;
+        @include box-highshadow
     }
     &--cards {
         margin-top: 1rem;
