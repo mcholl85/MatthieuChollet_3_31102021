@@ -1,0 +1,22 @@
+@keyframes menuItems {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+$anim-duration: 500ms;
+$anim-delay: 200ms;
+
+.anim-menuItems {
+    animation: menuItems $anim-duration ease-out both;
+    @for $i from 1 through 10 {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+        }
+    }
+}
