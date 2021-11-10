@@ -162,14 +162,16 @@ a {
 .menu {
   margin-bottom: 1.125rem;
 }
+.menu__heading {
+  padding-left: 0.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
 .menu__underline {
   margin: 0.375rem 0.6rem;
   width: 2.125rem;
   border: 3px solid #99E2D0;
   border-top-width: 0;
-}
-.menu__heading {
-  padding-left: 0.6rem;
 }
 .menu__item {
   background-color: #FFFFFF;
@@ -230,7 +232,6 @@ a {
   text-align: center;
 }
 .localisation__city {
-  font-weight: bold;
   padding: 1rem 0;
 }
 .localisation__city__icon {
