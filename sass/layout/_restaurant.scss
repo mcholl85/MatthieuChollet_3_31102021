@@ -1,6 +1,7 @@
 .restaurant {
     position: relative;
     @include box-shadow;
+    transition: box-shadow ease-out 500ms;
     border-radius: 0.625rem;
     overflow: hidden;
     display: flex;
@@ -26,5 +27,8 @@
         justify-content: space-between;
         padding: 1rem;
         background-color: white;
+    }
+    &:hover {
+        @include box-highshadow;
     }
 }

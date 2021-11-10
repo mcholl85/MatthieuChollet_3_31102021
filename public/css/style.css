@@ -1,4 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+@keyframes menuItems {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.anim-menuItems {
+  animation: menuItems 500ms ease-out both;
+}
+.anim-menuItems--1 {
+  animation-delay: 200ms;
+}
+.anim-menuItems--2 {
+  animation-delay: 400ms;
+}
+.anim-menuItems--3 {
+  animation-delay: 600ms;
+}
+.anim-menuItems--4 {
+  animation-delay: 800ms;
+}
+.anim-menuItems--5 {
+  animation-delay: 1000ms;
+}
+.anim-menuItems--6 {
+  animation-delay: 1200ms;
+}
+.anim-menuItems--7 {
+  animation-delay: 1400ms;
+}
+.anim-menuItems--8 {
+  animation-delay: 1600ms;
+}
+.anim-menuItems--9 {
+  animation-delay: 1800ms;
+}
+.anim-menuItems--10 {
+  animation-delay: 2000ms;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -39,6 +83,7 @@ a {
 .restaurant {
   position: relative;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow ease-out 500ms;
   border-radius: 0.625rem;
   overflow: hidden;
   display: flex;
@@ -65,6 +110,9 @@ a {
   justify-content: space-between;
   padding: 1rem;
   background-color: white;
+}
+.restaurant:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .footer {
