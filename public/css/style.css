@@ -327,6 +327,7 @@ a {
 .like i::before {
   position: absolute;
   opacity: 1;
+  transition: opacity ease-in 200ms;
 }
 .like i::after {
   font-weight: 900;
@@ -335,7 +336,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity ease-in 600ms;
+  transition: opacity ease-in 200ms;
 }
 .like:hover i::before {
   opacity: 0;

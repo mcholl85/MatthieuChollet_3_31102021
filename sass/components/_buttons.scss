@@ -29,6 +29,7 @@
     & i::before {
         position: absolute;
         opacity: 1;
+        transition: opacity ease-in 200ms;
     }
     & i::after {
         font-weight: 900;
@@ -37,7 +38,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0;
-        transition: opacity ease-in 600ms;
+        transition: opacity ease-in 200ms;
     }
     &:hover {
         & i::before {
