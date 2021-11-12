@@ -1,7 +1,9 @@
+/* General colors */
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
+/* Background colors */
 $color-bg-localisation: #eaeaea;
 $color-bg-booking: #f6f6f6;
 $color-bg-tutorial: #ffffff;
@@ -10,9 +12,24 @@ $color-bg-cards: #f6f6f6;
 $color-bg-menu: #FFFFFF;
 $color-bg-footer: #353535;
 
+/* Section Tutorial */
 $color-tutorial-list: #f6f6f6;
 $color-tutorial-icons: #7e7e7e;
 
+/* Section Footer */
 $color-footer-text: #ffffff;
 
+/* Button Color */
 $color-btn-like: linear-gradient(to top right, $color-secondary, $color-primary);
+
+
+/* Animation menu items */
+$animMenu-duration: 500ms;
+$animMenu-delay: 200ms;
+
+/* Animation Loader */
+$animloader-duration: 3000ms;
+$color-progressbar: linear-gradient(90deg, rgba(153,226,208,1) 25%, rgba(255,121,218,1) 50%, rgba(147,86,220,1) 75%);
+$color-bg-progressbar: #f6f6f6;
+$animprogbar-duration: 2000ms;
+$animprogbar-delay: 200ms;

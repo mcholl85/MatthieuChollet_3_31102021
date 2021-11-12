@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+/* General colors */
+/* Background colors */
+/* Section Tutorial */
+/* Section Footer */
+/* Button Color */
+/* Animation menu items */
+/* Animation Loader */
+/* Animation Menu Items */
 @keyframes menuItems {
   0% {
     opacity: 0;
@@ -43,15 +51,73 @@
   animation-delay: 2000ms;
 }
 
+/* Loader Homepage */
+@keyframes loader {
+  0%, 99% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(9999px);
+  }
+}
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(1);
+    animation-timing-function: cubic-bezier(0.88, 0, 0.47, 1);
+  }
+  20% {
+    transform: scaleX(0.85);
+  }
+  50% {
+    transform: scaleX(0.6);
+    animation-timing-function: cubic-bezier(0.88, 0, 1, 0.57);
+  }
+  80% {
+    transform: scaleX(0.1);
+    animation-timing-function: cubic-bezier(0, 0.47, 0.47, 1);
+  }
+  100% {
+    transform: scaleX(0);
+    animation-timing-function: cubic-bezier(0, 0.71, 0, 1);
+  }
+}
+.loader {
+  position: fixed;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  animation: loader 3000ms forwards;
+}
+.loader .progress {
+  max-width: 36rem;
+  width: 80%;
+  height: 2rem;
+  margin: 1rem;
+  border: 2px solid;
+  border-radius: 0.6rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: linear-gradient(90deg, #99e2d0 25%, #ff79da 50%, #9356dc 75%);
+}
+.loader .progress__bar {
+  height: 2rem;
+  background-color: #f6f6f6;
+  transform-origin: right;
+  animation: progress-bar 2000ms 200ms forwards;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
 
-header {
-  font-family: "Shrikhand", cursive;
-}
-
-.footer__heading {
+header, .footer__heading, .loader__heading {
   font-family: "Shrikhand", cursive;
 }
 
@@ -140,14 +206,13 @@ a {
   max-height: 250px;
   object-fit: cover;
   margin-bottom: -2rem;
-  overflow: hidden;
 }
 
 .cards {
   display: flex;
   flex-flow: column nowrap;
+  position: relative;
   background-color: #f6f6f6;
-  overflow: overlay;
   border-radius: 2rem 2rem 0 0;
   padding: 0 0.75rem;
 }
@@ -162,14 +227,16 @@ a {
 .menu {
   margin-bottom: 1.125rem;
 }
+.menu__heading {
+  padding-left: 0.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
 .menu__underline {
   margin: 0.375rem 0.6rem;
   width: 2.125rem;
   border: 3px solid #99E2D0;
   border-top-width: 0;
-}
-.menu__heading {
-  padding-left: 0.6rem;
 }
 .menu__item {
   background-color: #FFFFFF;
@@ -230,7 +297,6 @@ a {
   text-align: center;
 }
 .localisation__city {
-  font-weight: bold;
   padding: 1rem 0;
 }
 .localisation__city__icon {
@@ -326,6 +392,7 @@ a {
 .like i::before {
   position: absolute;
   opacity: 1;
+  transition: opacity ease-in 200ms;
 }
 .like i::after {
   font-weight: 900;
@@ -334,7 +401,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
-  transition: opacity ease-in 600ms;
+  transition: opacity ease-in 200ms;
 }
 .like:hover i::before {
   opacity: 0;
