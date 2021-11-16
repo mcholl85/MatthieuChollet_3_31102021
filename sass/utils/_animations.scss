@@ -11,45 +11,34 @@
     }
 }
 
-.anim-menuItems {
-    animation: menuItems $animMenu-duration ease-out both;
-    @for $i from 1 through 10 {
-        &--#{$i} {
-            animation-delay: $animMenu-delay * $i;
+    .anim-menuItems {
+        animation: menuItems $animMenu-duration ease-out both;
+        @for $i from 1 through 10 {
+            &--#{$i} {
+                animation-delay: $animMenu-delay * $i;
+            }
         }
     }
-}
 
 /* Loader Homepage */
 
 @keyframes loader {
     0%, 99% {
         transform: translateX(0px);
+        opacity: 0.8;
     }
     100% {
         transform: translateX(9999px);
     }
 }
 
-@keyframes progress-bar {
+@keyframes loader-spinner {
     0% {
-        transform: scaleX(1);
-        animation-timing-function: cubic-bezier(.88,0,.47,1);
-    }
-    20% {
-        transform: scaleX(0.85);
-    }
-    50% {
-        transform: scaleX(0.6);
-        animation-timing-function: cubic-bezier(.88,0,1,.57);
-    }
-    80% {
-        transform: scaleX(0.1);
-        animation-timing-function: cubic-bezier(0,.47,.47,1);
+        transform: rotate(0deg);
+        animation-timing-function: cubic-bezier(.76,.07,.28,1.04);
     }
     100% {
-        transform: scaleX(0);
-        animation-timing-function: cubic-bezier(0,.71,0,1);
+        transform: rotate(1440deg);
     }
 }
 
@@ -61,27 +50,13 @@
     top: 0px;
     left: 0px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
     animation: loader $animloader-duration forwards;
 
     .progress {
-        max-width: 36rem;
-        width: 80%;
-        height: 2rem;
-        margin: 1rem;
-        border: 2px solid;
-        border-radius: 0.6rem;
-        @include box-shadow;
-        overflow: hidden;
-        background: $color-progressbar;   
-        &__bar {
-            height: 2rem;
-            background-color: $color-bg-progressbar;
-            transform-origin: right;
-            animation: progress-bar $animprogbar-duration $animprogbar-delay forwards;
-        }
+        @include spinner(4rem, 1rem, $color-primary, $color-secondary, $color-tertiary, transparent);
+        animation: loader-spinner $animprogbar-duration $animprogbar-delay both;
     }
 }
