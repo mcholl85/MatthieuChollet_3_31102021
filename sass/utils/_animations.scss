@@ -76,7 +76,7 @@
         border-radius: 0.6rem;
         @include box-shadow;
         overflow: hidden;
-        background: $color-progressbar;   
+        background: $color-progressbar;
         &__bar {
             height: 2rem;
             background-color: $color-bg-progressbar;
