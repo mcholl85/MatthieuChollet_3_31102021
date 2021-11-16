@@ -15,3 +15,13 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+@mixin spinner($size, $border-size, $clr-top, $clr-right, $clr-bottom, $color-left) {
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    border-top: $border-size solid $clr-top;
+    border-right: $border-size solid $clr-right;
+    border-bottom: $border-size solid $clr-bottom;
+    border-left: $border-size solid $color-left;
+}

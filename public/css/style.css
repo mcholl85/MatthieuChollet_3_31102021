@@ -55,30 +55,19 @@
 @keyframes loader {
   0%, 99% {
     transform: translateX(0px);
+    opacity: 0.8;
   }
   100% {
     transform: translateX(9999px);
   }
 }
-@keyframes progress-bar {
+@keyframes loader-spinner {
   0% {
-    transform: scaleX(1);
-    animation-timing-function: cubic-bezier(0.88, 0, 0.47, 1);
-  }
-  20% {
-    transform: scaleX(0.85);
-  }
-  50% {
-    transform: scaleX(0.6);
-    animation-timing-function: cubic-bezier(0.88, 0, 1, 0.57);
-  }
-  80% {
-    transform: scaleX(0.1);
-    animation-timing-function: cubic-bezier(0, 0.47, 0.47, 1);
+    transform: rotate(0deg);
+    animation-timing-function: cubic-bezier(0.76, 0.07, 0.28, 1.04);
   }
   100% {
-    transform: scaleX(0);
-    animation-timing-function: cubic-bezier(0, 0.71, 0, 1);
+    transform: rotate(1440deg);
   }
 }
 .loader {
@@ -89,35 +78,27 @@
   top: 0px;
   left: 0px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
   animation: loader 3000ms forwards;
 }
 .loader .progress {
-  max-width: 36rem;
-  width: 80%;
-  height: 2rem;
-  margin: 1rem;
-  border: 2px solid;
-  border-radius: 0.6rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  background: linear-gradient(90deg, #99e2d0 25%, #ff79da 50%, #9356dc 75%);
-}
-.loader .progress__bar {
-  height: 2rem;
-  background-color: #f6f6f6;
-  transform-origin: right;
-  animation: progress-bar 2000ms 200ms forwards;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border-top: 1rem solid #9356DC;
+  border-right: 1rem solid #FF79DA;
+  border-bottom: 1rem solid #99E2D0;
+  border-left: 1rem solid transparent;
+  animation: loader-spinner 3000ms 100ms both;
 }
 
 body {
   font-family: "Roboto", sans-serif;
 }
 
-header, .footer__heading, .loader__heading {
+header, .footer__heading {
   font-family: "Shrikhand", cursive;
 }
 
