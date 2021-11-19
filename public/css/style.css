@@ -319,8 +319,11 @@ a {
   border-radius: 0.9rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.tutorial__steps__list--pink {
+.tutorial__steps__list:hover {
   background-color: #f5edff;
+}
+.tutorial__steps__list:hover .tutorial__steps__icons {
+  color: #9356DC;
 }
 .tutorial__steps__count {
   color: white;
@@ -339,10 +342,12 @@ a {
   color: #7e7e7e;
   max-width: 1rem;
 }
-.tutorial__steps__icons--pink {
-  color: #9356DC;
-}
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .tutorial__steps {
+    display: inline-flex;
+  }
+}
 .gallery {
   background-color: #f6f6f6;
   padding: 3rem 1.25rem;
