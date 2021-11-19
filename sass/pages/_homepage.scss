@@ -30,30 +30,37 @@
     }
     &__steps {
         list-style-type: none;
-        & li {
+        &__list {
             background-color: $color-tutorial-list;
             margin-bottom: 1.25rem;
             font-size: 0.9rem;
             padding: 1.25rem;
             margin-left: 0.75rem;
             border-radius: 0.9rem;
+            @include box-shadow;
+            &--pink {
+                background-color: #f5edff;
+            }
         }
         &__count {
-                color: white;
-                text-align: center;
-                background-color: $color-primary;
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-                width: 1.5rem;
-                height: 1.5rem;
-                border-radius: 50%;
-                margin-left: -2rem;
+            color: white;
+            text-align: center;
+            background-color: $color-primary;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            margin-left: -2rem;
         }
         &__icons {
-                margin: 0 1.25rem;
-                color: $color-tutorial-icons;
-                max-width: 1rem;
+            margin: 0 1.25rem;
+            color: $color-tutorial-icons;
+            max-width: 1rem;
+            &--pink {
+                color: $color-primary;
+            }
         }
     }
 }
