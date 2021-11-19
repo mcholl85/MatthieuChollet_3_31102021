@@ -143,6 +143,7 @@ a {
 .restaurant__photo {
   height: 174px;
   object-fit: cover;
+  width: 100%;
 }
 .restaurant__new {
   background-color: #99E2D0;
