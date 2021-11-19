@@ -165,6 +165,16 @@ a {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .restaurant {
+    flex-basis: 48%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurant {
+    flex: 1;
+  }
+}
 .footer {
   background-color: #353535;
   color: #ffffff;
@@ -207,7 +217,17 @@ a {
   align-items: center;
   justify-content: space-between;
 }
+.cards__sections {
+  display: flex;
+  flex-direction: column;
+}
 
+@media screen and (min-width: 1024px) {
+  .cards__sections {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .menu {
   margin-bottom: 1.125rem;
 }
@@ -276,6 +296,25 @@ a {
   transform: rotate(360deg);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .cards {
+    padding: 0 3rem;
+  }
+
+  .picture-restaurant {
+    max-height: 350px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    width: 32%;
+    min-width: 32%;
+  }
+
+  .picture-restaurant {
+    max-height: 450px;
+  }
+}
 .localisation {
   background-color: #eaeaea;
   text-align: center;
@@ -343,11 +382,6 @@ a {
   max-width: 1rem;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .tutorial__steps {
-    display: inline-flex;
-  }
-}
 .gallery {
   background-color: #f6f6f6;
   padding: 3rem 1.25rem;
@@ -355,7 +389,43 @@ a {
 .gallery__heading {
   margin-bottom: 1.25rem;
 }
+.gallery__links {
+  display: flex;
+  flex-flow: column nowrap;
+}
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .tutorial {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .gallery {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .gallery__links {
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tutorial__steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .tutorial__steps__list {
+    flex-grow: 1;
+  }
+
+  .gallery__links {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
 .btn {
   padding: 0.875rem 1.25rem;
   margin-bottom: 3.25rem;

@@ -65,19 +65,50 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .tutorial {
-        &__steps {
-            display: inline-flex;
-        }
-    }
-}
-
-
 .gallery {
     background-color: $color-bg-restaurants;
     padding: 3rem 1.25rem;
     &__heading {
         margin-bottom: 1.25rem;
+    }
+    &__links {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .tutorial {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .gallery {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        &__links {
+            flex-flow: row wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .tutorial {
+        &__steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            &__list {
+                flex-grow: 1;
+            }
+        }
+    }
+    .gallery {
+        &__links {
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: space-between;
+        }
     }
 }
