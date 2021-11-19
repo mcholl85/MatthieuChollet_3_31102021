@@ -38,8 +38,11 @@
             margin-left: 0.75rem;
             border-radius: 0.9rem;
             @include box-shadow;
-            &--pink {
+            &:hover {
                 background-color: #f5edff;
+                & .tutorial__steps__icons {
+                    color: $color-primary;
+                }
             }
         }
         &__count {
@@ -58,12 +61,18 @@
             margin: 0 1.25rem;
             color: $color-tutorial-icons;
             max-width: 1rem;
-            &--pink {
-                color: $color-primary;
-            }
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .tutorial {
+        &__steps {
+            display: inline-flex;
+        }
+    }
+}
+
 
 .gallery {
     background-color: $color-bg-restaurants;
